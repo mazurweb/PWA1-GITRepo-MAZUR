@@ -1,3 +1,11 @@
+/**
+ * Name: Michael Mazur
+ * Date: 05/10/2015
+ * Assignment: Debug - Database.js
+ * @type {string[]}
+ */
+
+//variable db stores all data base values
 var db = [
 	"JavaScript Version History|http://http://wddbs.com/javascript/sfw/online/#p=videos&s=3&file=01.html",
 	"JavaScript in the Browser|http://wddbs.com/javascript/sfw/online/#p=videos&s=3&file=01.html",
