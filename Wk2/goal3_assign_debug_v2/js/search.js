@@ -8,7 +8,6 @@
 
 //Initialize search.js when page loads
 (function(){
-
     // Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
 
     //Variable creation for resultsDIV which is set to the value/content of the div with the ID of results
@@ -18,6 +17,7 @@
     //Sets variable currentSearch to an empty variable for future use
         currentSearch = ''
         ;
+
 
     // Validates search query
     //setting variable validate equal to new function that passes the parameter of query
@@ -76,7 +76,7 @@
             // save a lowercase variable of the video title
             var dbTitleEnd = db[i].indexOf('|');
             var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd);
-
+        }
             // loop through the user's search query words
             // save a lowercase variable of the search keyword
 
@@ -97,7 +97,7 @@
                 //sort the results
                 results.sort();
             }
-        }
+
             // Check that matches were found, and run output functions
             //IF the length of results is equal to 0
             // then run function noMatch()
@@ -167,12 +167,13 @@
     //validate function is ran with the parameter of query
     document.forms[0].onsubmit = function(){
         var query = searchInput.value;
-        validqte(query);
+        console.log(query);
+       validqte(query);
 
         // return false is needed for most events - this will be reviewed in upcoming course material
         // THE LINE DIRECTLY BELOW IS CORRECT
         return false;
     };
-});
+})();
 
 //END OF SEARCH SCRIPT
