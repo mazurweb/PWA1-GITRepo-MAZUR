@@ -76,7 +76,7 @@
             // save a lowercase variable of the video title
             var dbTitleEnd = db[i].indexOf('|');
             var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd);
-        }
+
             // loop through the user's search query words
             // save a lowercase variable of the search keyword
 
@@ -97,7 +97,7 @@
                 //sort the results
                 results.sort();
             }
-
+        }
             // Check that matches were found, and run output functions
             //IF the length of results is equal to 0
             // then run function noMatch()
@@ -167,8 +167,7 @@
     //validate function is ran with the parameter of query
     document.forms[0].onsubmit = function(){
         var query = searchInput.value;
-        console.log(query);
-       validqte(query);
+        validqte(query);
 
         // return false is needed for most events - this will be reviewed in upcoming course material
         // THE LINE DIRECTLY BELOW IS CORRECT
