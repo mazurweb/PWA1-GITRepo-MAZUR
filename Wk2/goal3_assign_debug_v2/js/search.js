@@ -1,7 +1,7 @@
 /**
  * Name: Michael Mazur
- * Date: 05/10/2015
- * Assignment: Debuggy : Analyze - Code was provided created additional pseudocode
+ * Date: 05/15/2015
+ * Assignment: Debuggy : Debug - Code was provided created additional pseudocode
  */
 
 // Create privatized scope using a self-executing function
@@ -91,12 +91,13 @@
                 // is the keyword anywhere in the video title?
                 // If a match is found, push full db[i] into results array
                 var compare = dbitem.indexOf(qitem);
-                if (compare != -1) {
+                if (compare !== -1) {
                     results.push(db[i]);
                 }
                 //sort the results
                 results.sort();
             }
+        }
             // Check that matches were found, and run output functions
             //IF the length of results is equal to 0
             // then run function noMatch()
@@ -107,7 +108,6 @@
             } else {
                 showMatches(results);
             }
-        }
     };
     //end of search function
 
