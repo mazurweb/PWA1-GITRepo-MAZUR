@@ -12,9 +12,11 @@
     console.log(fighter1_txt);
     var fighter2_txt = document.querySelector('#batman').querySelector('p');                                            //Declares fighter2_txt and selects the p element in #batman div
     console.log(fighter2_txt);
-    var round_txt = document.getElementById('round');                                                                    //Declares round_txt and selects the h2 element in the #fight_btn div
-    var button = document.getElementsByClassName('bluebutton');                                                                  //Declares button and selects the button element in the #fight_btn div
-    button.addEventListener('click', fight);                                                                            //Sets up fight button with click event to call fight function
+    var round_txt = document.querySelector('h2');                                                                       //Declares round_txt and selects the h2 element in the #fight_btn div
+    console.log(round_txt);
+    var button = document.querySelector('#fight_btn');                                                                  //Declares button and selects the button element in the #fight_btn div
+    console.log(button);
+    button.addEventListener("click", fight, false);                                                                     //Sets up fight button with click event to call fight function
 
     var fighters = [                                                                                                    //Fighter array storing fighter objects that stores properties for both fighters.
         {                                                                                                               //Fighter1
@@ -54,7 +56,7 @@
 
             //check for victor                                                                                          //After each deduction of health via damage it will then check for a victor
             var result = winnerCheck();                                                                                 //Variable Result will be set to the function winnerCheck()
-
+            round++;
             round_txt.innerHTML = "ROUND #" + round + " Results:";
             if (result==="no winner")                                                                                   //IF the result is no winner
             {
